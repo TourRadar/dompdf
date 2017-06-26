@@ -59,6 +59,15 @@ class TableCell extends Block
             return;
         }
 
+        if(!is_iterable($cells["rows"])){
+            return;
+        }
+
+        if(!is_iterable($cells["columns"])){
+            return;
+        }
+
+
         $num_rows = $cellmap->get_num_rows();
         $num_cols = $cellmap->get_num_cols();
 
